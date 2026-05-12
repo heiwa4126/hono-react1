@@ -18,7 +18,12 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"erasableSyntaxOnly": true,
-		"noFallthroughCasesInSwitch": true
+		"noFallthroughCasesInSwitch": true,
+
+		/* import aliases */
+		"paths": {
+			"@shared/*": ["../../packages/shared/src/*"],
+		},
 	},
-	"include": ["vite.config.ts"]
+	"include": ["vite.config.ts"],
 }
