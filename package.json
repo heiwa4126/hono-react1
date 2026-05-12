@@ -11,10 +11,16 @@
 		"format": "oxfmt",
 		"lint": "oxlint",
 		"check": "oxfmt && oxlint --fix",
+		"workspace:install": "pnpm -r install",
+		"workspace:update": "pnpm -r update",
+		"build": "pnpm -r build",
+		"workspace:list": "pnpm list -r --depth -1",
+		"workspace:path": "pnpm -r exec pwd",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {
-		"hono": "^4.12.18"
+		"hono": "^4.12.18",
+		"zod": "^4.4.3"
 	},
 	"devEngines": {
 		"packageManager": {

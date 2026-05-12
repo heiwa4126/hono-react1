@@ -15,6 +15,7 @@
 	"scripts": {
 		"preinstall": "pnpm audit",
 		"ex1": "tsx ./src/ex1.ts",
+		"ex2": "tsx ./src/ex2.ts",
 		"build": "tsdown",
 		"clean": "rm -rf dist",
 		"format": "oxfmt",

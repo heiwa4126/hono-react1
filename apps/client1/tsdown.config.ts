@@ -8,7 +8,7 @@ function fixCjsExtension({ format }: { format: string }) {
 export default defineConfig([
 	{
 		// ex1 (ESM only)
-		clean: false,
+		clean: true,
 		entry: ["src/ex*.ts"],
 		format: ["esm"],
 		outDir: "dist",

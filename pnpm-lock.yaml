@@ -210,6 +210,9 @@ importers:
       hono:
         specifier: ^4.12.18
         version: 4.12.18
+      zod:
+        specifier: ^4.4.3
+        version: 4.4.3
 
   apps/api:
     dependencies:
@@ -237,10 +240,6 @@ importers:
         version: 5.9.3
 
   apps/client1:
-    dependencies:
-      '@shared/app':
-        specifier: workspace:*
-        version: link:../../packages/shared
     devDependencies:
       '@types/node':
         specifier: ^25.7.0
