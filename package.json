@@ -17,6 +17,7 @@
 		"start": "pnpm --dir apps/api start",
 		"workspace:list": "pnpm list -r --depth -1",
 		"workspace:path": "pnpm -r exec pwd",
+		"remove:node_modules": "find . -type d -name node_modules -prune -exec rm -rfv {} +",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {
