@@ -1,7 +1,6 @@
-import { type AppType } from "@shared/app";
-import { hc, type InferResponseType } from "hono/client";
+import { type InferResponseType } from "hono/client";
+import { client } from "./client.js";
 
-const client = hc<AppType>("http://localhost:3000");
 const helloGet = client.hello.$get;
 
 async function main(): Promise<void> {

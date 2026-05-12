@@ -1,7 +1,5 @@
-import { GetUserNotFoundResponseType, GetUserSuccessResponseType, type AppType } from "@shared/app";
-import { hc } from "hono/client";
-
-const client = hc<AppType>("http://localhost:3000");
+import { GetUserNotFoundResponseType, GetUserSuccessResponseType } from "@shared/app";
+import { client } from "./client.js";
 
 async function getUser(id: string): Promise<void> {
 	const response = await client.users[":id"].$get({ param: { id } });
