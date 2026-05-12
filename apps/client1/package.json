@@ -16,11 +16,15 @@
 		"preinstall": "pnpm audit",
 		"ex1": "tsx ./src/ex1.ts",
 		"ex2": "tsx ./src/ex2.ts",
+		"ex3": "tsx ./src/ex3.ts",
 		"build": "tsdown",
 		"clean": "rm -rf dist",
 		"format": "oxfmt",
 		"lint": "oxlint",
 		"check": "oxfmt && oxlint --fix"
+	},
+	"dependencies": {
+		"@shared/app": "workspace:*"
 	},
 	"devDependencies": {
 		"@types/node": "^25.7.0",

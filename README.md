@@ -1,9 +1,9 @@
 # hono-react1
 
-pnpm で モノレポの練習。
+pnpm でモノレポの練習。
 
 - hono(apps/api) で API を作って
-- hono/client を使って APIにアクセスする
+- hono/client を使って API にアクセスする
   - client1 (apps/client1) と
   - react SPA (apps/web)
 
@@ -12,7 +12,7 @@ pnpm で モノレポの練習。
 プロジェクトルートで
 
 ```sh
-pnpm -r i
+pnpm -r i  # `pnpm i` でも一緒だけど、気持ち的に `-r` つけて
 pnpm -r build
 pnpm start
 ```
@@ -27,6 +27,9 @@ node dist/ex1.js
 # GET /goodbye
 pnpm run ex2
 node dist/ex2.js
+# GET /users/:id
+pnpm run ex3
+node dist/ex3.js
 ```
 
 みたいなノリで実行。

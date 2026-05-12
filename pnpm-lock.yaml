@@ -41,6 +41,10 @@ importers:
         version: 6.0.3
 
   apps/client1:
+    dependencies:
+      '@shared/app':
+        specifier: workspace:*
+        version: link:../../packages/shared
     devDependencies:
       '@types/node':
         specifier: ^25.7.0
@@ -104,7 +108,11 @@ importers:
         specifier: ^8.0.12
         version: 8.0.12(@types/node@25.7.0)(esbuild@0.28.0)(tsx@4.21.0)
 
-  packages/shared: {}
+  packages/shared:
+    dependencies:
+      '@hono/zod-validator':
+        specifier: ^0.8.0
+        version: 0.8.0(hono@4.12.18)(zod@4.4.3)
 
 packages:
 
@@ -561,6 +569,12 @@ packages:
     engines: {node: '>=20'}
     peerDependencies:
       hono: ^4
+
+  '@hono/zod-validator@0.8.0':
+    resolution: {integrity: sha512-5uS4S1/LKtZQYvD4BtpPUFkOv8d1wNxHHrChm26buMiEYc1FrHWvDUaKVBwkiVtvSExHSpLGDvcnpI2Copyj9w==}
+    peerDependencies:
+      hono: '>=4.10.0'
+      zod: ^3.25.0 || ^4.0.0
 
   '@humanfs/core@0.19.2':
     resolution: {integrity: sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA==}
@@ -1930,6 +1944,11 @@ snapshots:
   '@hono/node-server@2.0.2(hono@4.12.18)':
     dependencies:
       hono: 4.12.18
+
+  '@hono/zod-validator@0.8.0(hono@4.12.18)(zod@4.4.3)':
+    dependencies:
+      hono: 4.12.18
+      zod: 4.4.3
 
   '@humanfs/core@0.19.2':
     dependencies:
