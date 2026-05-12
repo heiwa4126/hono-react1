@@ -237,6 +237,10 @@ importers:
         version: 5.9.3
 
   apps/client1:
+    dependencies:
+      '@shared/app':
+        specifier: workspace:*
+        version: link:../../packages/shared
     devDependencies:
       '@types/node':
         specifier: ^25.7.0

@@ -1,14 +1,17 @@
-const API_URL = "http://localhost:3000/hello";
+import { type AppType } from "@shared/app";
+import { hc, type InferResponseType } from "hono/client";
+
+const client = hc<AppType>("http://localhost:3000");
 
 async function main(): Promise<void> {
-	const response = await fetch(API_URL);
+	const response = await client.hello.$get();
 
 	if (!response.ok) {
 		throw new Error(`Request failed: ${response.status} ${response.statusText}`);
 	}
 
-	const body = await response.text();
-	console.log(body);
+	const body: InferResponseType<typeof client.hello.$get> = await response.json();
+	console.log(body.message);
 }
 
 main().catch((error: unknown) => {

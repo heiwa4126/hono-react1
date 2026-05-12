@@ -8,6 +8,9 @@
 	"type": "module",
 	"main": "index.js",
 	"scripts": {
+		"format": "oxfmt",
+		"lint": "oxlint",
+		"check": "oxfmt && oxlint --fix",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {
