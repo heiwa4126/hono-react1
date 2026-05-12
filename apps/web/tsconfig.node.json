@@ -22,8 +22,8 @@
 
 		/* import aliases */
 		"paths": {
-			"@shared/*": ["../../packages/shared/src/*"],
-		},
+			"@shared/*": ["../../packages/shared/src/*"]
+		}
 	},
-	"include": ["vite.config.ts"],
+	"include": ["vite.config.ts"]
 }

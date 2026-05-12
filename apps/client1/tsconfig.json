@@ -43,8 +43,8 @@
 
 		// import aliases
 		"paths": {
-			"@shared/*": ["../../packages/shared/src/*"],
-		},
+			"@shared/*": ["../../packages/shared/src/*"]
+		}
 	},
-	"include": ["src/**/*"],
+	"include": ["src/**/*"]
 }

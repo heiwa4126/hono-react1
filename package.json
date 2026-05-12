@@ -10,6 +10,9 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
+	"dependencies": {
+		"hono": "^4.12.18"
+	},
 	"devEngines": {
 		"packageManager": {
 			"name": "pnpm",

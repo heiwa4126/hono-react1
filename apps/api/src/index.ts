@@ -1,13 +1,5 @@
 import { serve } from "@hono/node-server";
-import { Hono } from "hono";
-
-const app = new Hono();
-
-app.get("/hello", (c) => {
-	return c.json({
-		message: "hello",
-	});
-});
+import app from "@shared/app";
 
 serve(
 	{
@@ -18,6 +10,3 @@ serve(
 		console.log(`Server is running on http://localhost:${info.port}`);
 	},
 );
-
-export type AppType = typeof app;
-export default app;
