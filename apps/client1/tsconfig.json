@@ -44,10 +44,12 @@
 		"ignoreDeprecations": "6.0",
 		"skipLibCheck": true,
 
-		// import aliases
+		// import aliases.
+		// package.json の "@shared/app": "workspace:*" があれば不要のはず
+		// `tsc --noEmit` とかで使うかもなので残しておく
 		"paths": {
-			"@shared/*": ["../../packages/shared/src/*"]
-		}
+			"@shared/*": ["../../packages/shared/src/*"],
+		},
 	},
-	"include": ["src/**/*"]
+	"include": ["src/**/*"],
 }
