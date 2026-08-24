@@ -16,6 +16,6 @@ export default defineConfig([
 		sourcemap: false,
 		minify: false,
 		dts: false,
-		outExtensions: fixCjsExtension,
-	},
+		outExtensions: fixCjsExtension
+	}
 ]);

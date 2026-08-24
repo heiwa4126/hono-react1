@@ -3,26 +3,26 @@ import { Hono } from "hono";
 import { z } from "zod";
 
 export const GoodbyeResponseType = z.object({
-	message: z.string(),
+	message: z.string()
 });
 type GoodbyeResponse = z.infer<typeof GoodbyeResponseType>;
 
 const IdSchema = z.object({
-	id: z.string(),
+	id: z.string()
 });
 
 const UserSchema = z.object({
 	id: z.string(),
-	name: z.string(),
+	name: z.string()
 });
 
 export const GetUserSuccessResponseType = z.object({
-	user: UserSchema,
+	user: UserSchema
 });
 type GetUserSuccessResponse = z.infer<typeof GetUserSuccessResponseType>;
 
 export const GetUserNotFoundResponseType = z.object({
-	error: z.literal("not found"),
+	error: z.literal("not found")
 });
 type GetUserNotFoundResponse = z.infer<typeof GetUserNotFoundResponseType>;
 
@@ -30,7 +30,7 @@ function findUser(id: string) {
 	// ここではダミーのユーザーデータを返すだけにします
 	const users = [
 		{ id: "1", name: "Alice" },
-		{ id: "2", name: "Bob" },
+		{ id: "2", name: "Bob" }
 	];
 	return users.find((user) => user.id === id) || null;
 }
@@ -38,12 +38,12 @@ function findUser(id: string) {
 const app = new Hono()
 	.get("/hello", (c) => {
 		return c.json({
-			message: "hello",
+			message: "hello"
 		});
 	})
 	.get("/goodbye", (c) => {
 		return c.json({
-			message: "goodbye", // たとえばここを 1 などの数字にしてみると、クライアント側で型エラーになるはず
+			message: "goodbye" // たとえばここを 1 などの数字にしてみると、クライアント側で型エラーになるはず
 		} satisfies GoodbyeResponse);
 	})
 	.get("/users/:id", zValidator("param", IdSchema), (c) => {
@@ -58,16 +58,16 @@ const app = new Hono()
 		if (!user) {
 			return c.json(
 				{
-					error: "not found",
+					error: "not found"
 				} satisfies GetUserNotFoundResponse,
-				404,
+				404
 			);
 		}
 		return c.json(
 			{
-				user,
+				user
 			} satisfies GetUserSuccessResponse,
-			200,
+			200
 		);
 	});
 
