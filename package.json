@@ -21,7 +21,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {
-		"hono": "^4.13.9",
+		"hono": "^4.13.11",
 		"zod": "^4.6.5"
 	},
 	"devDependencies": {
