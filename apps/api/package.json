@@ -7,7 +7,7 @@
 		"start": "node dist/index.js"
 	},
 	"dependencies": {
-		"@hono/node-server": "^2.1.5",
+		"@hono/node-server": "^2.1.6",
 		"@shared/app": "workspace:*",
 		"hono": "^4.13.14"
 	},
